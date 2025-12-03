@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lista de Presentes - Matheus</title>
+  <style>
+    :root{--bg:#f4f6fb;--card:#ffffff;--accent:#0066cc}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+    body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
+    .card{background:var(--card);max-width:720px;width:100%;border-radius:14px;box-shadow:0 6px 18px rgba(13,38,59,0.08);padding:28px}
+    h1{margin:0 0 8px;font-size:20px}
+    p.lead{margin:0 0 18px;color:#445}
+    .short{display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+    .short .chip{background:#eef6ff;color:var(--accent);padding:10px 14px;border-radius:999px;font-weight:600;cursor:copy;user-select:none}
+    .list{display:grid;gap:14px}
+    .item{padding:14px;border-radius:10px;border:1px solid #eef2f7;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(250,250,252,0.6))}
+    .item b{display:block;margin-bottom:6px}
+    .actions{margin-top:12px;display:flex;gap:10px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:white;text-decoration:none;font-weight:600;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(0,102,204,0.12)}
+    footer{margin-top:18px;color:#667; font-size:13px}
+    @media (max-width:520px){.card{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="short">
+      <div class="chip" id="shortLink" title="Clique para copiar">https://l.pm/matheus</div>
+    </div>
+
+    <h1>🎁 Lista de Presentes — Matheus</h1>
+    <p class="lead">Clique nos itens para abrir os links. Você pode encaminhar este arquivo pelo WhatsApp — quando o destinatário abrir, verá esta página e poderá acessar os links.</p>
+
+    <div class="list">
+      <div class="item">
+        <b>1. Body Spray Arbo Botanic — O Boticário</b>
+        <div style="word-break:break-word">
+          <a href="https://www.boticario.com.br/body-spray-desodorante-arbo-botanic-100ml-v2/?gclsrc=aw.ds&&sku=B79417&utm_source=google&utm_medium=cpc&utm_campaign=G:BOT:Smart-Shopping:Padrao:Cuidados&gad_source=1&gad_campaignid=23098163458&gbraid=0AAAAA90O9wvU27G7R5tjpMrwSOK6pxw51&gclid=CjwKCAiA3L_JBhAlEiwAlcWO52_8HFKO6aNCDlusinHh8-i-PY-hl_Iq58M--sAAvY8r8Kefgw1ScBoCv8wQAvD_BwE" target="_blank" rel="noopener">Abrir link no site do Boticário</a>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#" id="open1">Abrir</a>
+          <a class="btn ghost" href="#" id="copy1">Copiar URL</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <b>2. Bolsa térmica / lancheira — Mercado Livre</b>
+        <div style="word-break:break-word">
+          <a href="https://www.mercadolivre.com.br/bolsa-isotermica-termica-lancheira-14l-porta-marmita-alca-transversal-removivel-de-ombro-academia-trabalho-passeio-2-compartimentos-elegante-premium-cor-preto-tche-amo/p/MLB28726333?pdp_filters=item_id:MLB3966563925#polycard_client=recommendations_pdp-pads-reviews&reco_backend=recos-pads-retrieval-4stars&wid=MLB3966563925&reco_model=rk_ent_v2_retsys_4stars&reco_client=pdp-pads-reviews&reco_item_pos=1&reco_backend_type=low_level&reco_id=acf9966b-9273-458d-80de-caadbab79b2c&sid=recos&is_advertising=true&ad_domain=PDPDESKTOP_RECOMMENDED&ad_position=2&ad_click_id=YTA2ZDc1YjUtYzEyMi00MGY3LWJjM2ItODIwYzVkODdkMDFj" target="_blank" rel="noopener">Abrir link no Mercado Livre</a>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#" id="open2">Abrir</a>
+          <a class="btn ghost" href="#" id="copy2">Copiar URL</a>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <script>
+    const url1 = "https://www.boticario.com.br/body-spray-desodorante-arbo-botanic-100ml-v2/?gclsrc=aw.ds&&sku=B79417&utm_source=google&utm_medium=cpc&utm_campaign=G:BOT:Smart-Shopping:Padrao:Cuidados&gad_source=1&gad_campaignid=23098163458&gbraid=0AAAAA90O9wvU27G7R5tjpMrwSOK6pxw51&gclid=CjwKCAiA3L_JBhAlEiwAlcWO52_8HFKO6aNCDlusinHh8-i-PY-hl_Iq58M--sAAvY8r8Kefgw1ScBoCv8wQAvD_BwE";
+    const url2 = "https://www.mercadolivre.com.br/bolsa-isotermica-termica-lancheira-14l-porta-marmita-alca-transversal-removivel-de-ombro-academia-trabalho-passeio-2-compartimentos-elegante-premium-cor-preto-tche-amo/p/MLB28726333?pdp_filters=item_id:MLB3966563925#polycard_client=recommendations_pdp-pads-reviews&reco_backend=recos-pads-retrieval-4stars&wid=MLB3966563925&reco_model=rk_ent_v2_retsys_4stars&reco_client=pdp-pads-reviews&reco_item_pos=1&reco_backend_type=low_level&reco_id=acf9966b-9273-458d-80de-caadbab79b2c&sid=recos&is_advertising=true&ad_domain=PDPDESKTOP_RECOMMENDED&ad_position=2&ad_click_id=YTA2ZDc1YjUtYzEyMi00MGY3LWJjM2ItODIwYzVkODdkMDFj";
+
+    function copyToClipboard(text){
+      if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy')}catch(e){} ta.remove();
+      }
+      alert('Link copiado para a área de transferência');
+    }
+
+    document.getElementById('open1').addEventListener('click', function(e){ e.preventDefault(); window.open(url1, '_blank'); });
+    document.getElementById('open2').addEventListener('click', function(e){ e.preventDefault(); window.open(url2, '_blank'); });
+    document.getElementById('copy1').addEventListener('click', function(e){ e.preventDefault(); copyToClipboard(url1); });
+    document.getElementById('copy2').addEventListener('click', function(e){ e.preventDefault(); copyToClipboard(url2); });
+
+    // copiar short link ao clicar
+    document.getElementById('shortLink').addEventListener('click', function(){
+      copyToClipboard('https://l.pm/matheus');
+    });
+  </script>
+</body>
+</html>
